@@ -24,7 +24,7 @@ namespace BullsAndCowsTest
             var game = new BullsAndCowsGame(secretGenerator);
 
             // when
-            string answer = game.Guess("5678");
+            string answer = game.Guess("5 6 7 8");
             // then
             Assert.Equal("0A0B", answer);
         }
@@ -38,9 +38,23 @@ namespace BullsAndCowsTest
             var game = new BullsAndCowsGame(secretGenerator);
 
             // when
-            string answer = game.Guess("1234");
+            string answer = game.Guess("1 2 3 4");
             // then
             Assert.Equal("4A0B", answer);
+        }
+
+        [Fact]
+        public void ShouldReturn0A4BGivenAllDigitAndRightPosition()
+        {
+            // given
+            // var secretGenerator = new SecretGenerator();
+            var secretGenerator = new TestSecretGenerator();
+            var game = new BullsAndCowsGame(secretGenerator);
+
+            // when
+            string answer = game.Guess("4 3 2 1");
+            // then
+            Assert.Equal("0A4B", answer);
         }
     }
 
