@@ -44,7 +44,7 @@ namespace BullsAndCowsTest
         }
 
         [Fact]
-        public void ShouldReturn0A4BGivenAllDigitAndRightPosition()
+        public void ShouldReturn0A4BGivenAllDigitCorrectAndAllPositionWrong()
         {
             // given
             // var secretGenerator = new SecretGenerator();
