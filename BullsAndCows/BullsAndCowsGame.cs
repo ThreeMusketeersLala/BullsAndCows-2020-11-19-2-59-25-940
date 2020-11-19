@@ -21,6 +21,11 @@ namespace BullsAndCows
 
         private string Compare(string secret, string guess)
         {
+            if (secret == guess)
+            {
+                return "4A0B";
+            }
+
             return "0A0B";
         }
     }
